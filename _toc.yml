@@ -1,0 +1,16 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: 1_foss
+- file: 2_gee
+- file: 3_proscons
+- file: 4_python
+- file: 5_qgis
+- file: 6_sql
+- file: 7_aiml
+- file: 8_R
+- file: 9_next
+- file: references
