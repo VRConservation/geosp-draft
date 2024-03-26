@@ -1,2 +1,3 @@
 # geosp
-FOSS4G resources jupyter book
+Free and Open Source Geospatial Solutions
+See the book at https://vrconservation.github.io/geosp/
