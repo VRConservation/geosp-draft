@@ -5,8 +5,7 @@ format: jb-book
 root: intro
 chapters:
   - file: author
-  - file: preface
-  - file: 01_foss
+  - file: foss
   - file: 02_gee
   - file: 03_proscons
   - file: 04_python

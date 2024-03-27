@@ -1,9 +1,4 @@
-# Free and Open Source vs. No Code
-
-```{contents}
-:local:
-:depth: 2
-```
+# Google Earth Engine
 
 ## TL;DR
 
