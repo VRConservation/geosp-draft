@@ -30,7 +30,7 @@ Map.setCenter(-60.0, 7.0, 4);
 
 Map.addLayer(dataset, visualization, 'Aboveground biomass carbon');
 ```
- 
+
  Hitting run will gives you a basic map of aboveground biomass:
  
 ![](https://i.imgur.com/m7dOCRr.png)
@@ -85,7 +85,7 @@ Map.addLayer(dataset, vis_b, 'Belowground biomass carbon');
 ```
 ![](https://i.imgur.com/7hkdrV0.png)
  Note the belowground now shows up on top--turn off by clicking the checkmark in the layers tab or to view it first reverse the order of the code, e.g., line 22 moved to 21. You can also control layers by altering the Map.addLayer function adding False to add the layer, but it won't be turned on in the map (until you click it on):
- 
+
 ```javascript
 Map.addLayer(dataset, vis_b, 'Belowground biomass carbon', false);
 ```

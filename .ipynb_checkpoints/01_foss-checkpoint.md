@@ -32,5 +32,3 @@ PRA and RRA
 Diversity Equity
 
 Participation and videos from Arc government conference
-
-Ask Leander and Elizabeth to write a DEI/Community participation chapter?
