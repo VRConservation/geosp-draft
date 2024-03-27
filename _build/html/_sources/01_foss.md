@@ -1,6 +1,6 @@
 # Free & Open Source
 
-```{contents}
+```{tableofcontents}
 :local:
 :depth: 2
 ```
