@@ -1,4 +1,5 @@
-# Free & Open Source
+# FOSS
+Free and open source software
 
 Is it really either/or to analyze and visualize geospatial data?
 See this repo for a curated list of GEE resources: https://github.com/opengeos/Awesome-GEE?tab=readme-ov-file#r
