@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Pros &amp; Cons" href="03_proscons.html" />
-    <link rel="prev" title="Free &amp; Open Source" href="foss.html" />
+    <link rel="prev" title="FOSS" href="01_foss.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -276,7 +276,7 @@
       
       
       
-      <li><a href="_sources/02_gee.md" target="_blank"
+      <li><a href="_sources/02_gee.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -286,7 +286,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -403,67 +403,95 @@ document.write(`
 <p>Once you log into <a class="reference external" href="https://code.earthengine.google.com/">Earth Engine</a>, search for ‘carbon’ in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page select see example:</p>
 <p><img alt="aboveground | 500" src="https://i.imgur.com/z3xt9WD.png" /></p>
 <p>That will open a new code editor with the following javascript code:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">dataset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;NASA/ORNL/biomass_carbon_density/v1&#39;</span><span class="p">);</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;NASA/ORNL/biomass_carbon_density/v1&#39;</span><span class="p">);</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">visualization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;agb&#39;</span><span class="p">],</span>
-<span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">80.0</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;d9f0a3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;addd8e&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;78c679&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;41ab5d&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;238443&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;005a32&#39;</span><span class="p">]</span>
+<span class="n">var</span> <span class="n">visualization</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">bands</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;agb&#39;</span><span class="p">],</span>
+  <span class="nb">min</span><span class="p">:</span> <span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
+  <span class="nb">max</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">,</span>
+  <span class="n">palette</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;d9f0a3&#39;</span><span class="p">,</span> <span class="s1">&#39;addd8e&#39;</span><span class="p">,</span> <span class="s1">&#39;78c679&#39;</span><span class="p">,</span> <span class="s1">&#39;41ab5d&#39;</span><span class="p">,</span> <span class="s1">&#39;238443&#39;</span><span class="p">,</span> <span class="s1">&#39;005a32&#39;</span><span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nb">Map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">60.0</span><span class="p">,</span><span class="w"> </span><span class="mf">7.0</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">);</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">60.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
 
-<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">dataset</span><span class="p">,</span><span class="w"> </span><span class="nx">visualization</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Aboveground biomass carbon&#39;</span><span class="p">);</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">visualization</span><span class="p">,</span> <span class="s1">&#39;Aboveground biomass carbon&#39;</span><span class="p">);</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="n">var</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;NASA/ORNL/biomass_carbon_density/v1&#39;</span><span class="p">);</span>
+        <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
 </div>
 <p>Hitting run will gives you a basic map of aboveground biomass:</p>
 <p><img alt="" src="https://i.imgur.com/m7dOCRr.png" /></p>
 <p>You can zoom in or out and click the layer on or off. Selecting the inspector in the upper right panel will allow you to click on any pixel in the map and get the information from the raster displayed:</p>
 <p><img alt="" src="https://i.imgur.com/LZcLWWh.png" /></p>
 <p>In this case the Mosaic image has 4 bands related to above and belowground caronb, the lat lon of the point clicked is (-68.16, 1.83) and the pixel size is 10km. Add in the belowground (bgb) carbon with</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">vis_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;bgb&#39;</span><span class="p">],</span>
-<span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">80.0</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;D6BCB1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;AB8574&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;784E3D&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;3D2216&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;26140C&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;000000&#39;</span><span class="p">]</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">vis_b</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">bands</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;bgb&#39;</span><span class="p">],</span>
+  <span class="nb">min</span><span class="p">:</span> <span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
+  <span class="nb">max</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">,</span>
+  <span class="n">palette</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;D6BCB1&#39;</span><span class="p">,</span> <span class="s1">&#39;AB8574&#39;</span><span class="p">,</span> <span class="s1">&#39;784E3D&#39;</span><span class="p">,</span> <span class="s1">&#39;3D2216&#39;</span><span class="p">,</span> <span class="s1">&#39;26140C&#39;</span><span class="p">,</span> <span class="s1">&#39;000000&#39;</span><span class="p">]</span>
 <span class="p">};</span>
-<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">dataset</span><span class="p">,</span><span class="w"> </span><span class="nx">vis_b</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Belowground biomass carbon&#39;</span><span class="p">);</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">vis_b</span><span class="p">,</span> <span class="s1">&#39;Belowground biomass carbon&#39;</span><span class="p">);</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p>You can zoom the map out and center to approximately world level by changing line 10 of the code:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">Map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">24.83</span><span class="p">,</span><span class="w"> </span><span class="mf">19.88</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">24.83</span><span class="p">,</span> <span class="mf">19.88</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
 <p>Hit run or control + enter (windows) or command + enter (mac) to more rapidly run the new code. Cleaning up the code and adding comments with // to explain what each section does and standard coding practice (the double back slash allows you to add a comment that does not run when the code executes and is equivalent to the hash tag for python). You can comment out any line of code by clicking on the line and typing control/command enter on your keyboard. Reorganiztion will give you the following code and image:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Add global carbon density map</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">dataset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;NASA/ORNL/biomass_carbon_density/v1&#39;</span><span class="p">);</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Add</span> <span class="k">global</span> <span class="n">carbon</span> <span class="n">density</span> <span class="nb">map</span>
+<span class="n">var</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;NASA/ORNL/biomass_carbon_density/v1&#39;</span><span class="p">);</span>
 
-<span class="c1">// Add visual parameter variables</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">vis_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;agb&#39;</span><span class="p">],</span>
-<span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">80.0</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;d9f0a3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;addd8e&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;78c679&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;41ab5d&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;238443&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;005a32&#39;</span><span class="p">]</span>
+<span class="o">//</span> <span class="n">Add</span> <span class="n">visual</span> <span class="n">parameter</span> <span class="n">variables</span>
+<span class="n">var</span> <span class="n">vis_a</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">bands</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;agb&#39;</span><span class="p">],</span>
+  <span class="nb">min</span><span class="p">:</span> <span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
+  <span class="nb">max</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">,</span>
+  <span class="n">palette</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;d9f0a3&#39;</span><span class="p">,</span> <span class="s1">&#39;addd8e&#39;</span><span class="p">,</span> <span class="s1">&#39;78c679&#39;</span><span class="p">,</span> <span class="s1">&#39;41ab5d&#39;</span><span class="p">,</span> <span class="s1">&#39;238443&#39;</span><span class="p">,</span> <span class="s1">&#39;005a32&#39;</span><span class="p">]</span>
 <span class="p">};</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">vis_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;bgb&#39;</span><span class="p">],</span>
-<span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">80.0</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;D6BCB1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;AB8574&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;784E3D&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;3D2216&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;26140C&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;000000&#39;</span><span class="p">]</span>
+<span class="n">var</span> <span class="n">vis_b</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">bands</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;bgb&#39;</span><span class="p">],</span>
+  <span class="nb">min</span><span class="p">:</span> <span class="o">-</span><span class="mf">50.0</span><span class="p">,</span>
+  <span class="nb">max</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">,</span>
+  <span class="n">palette</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;D6BCB1&#39;</span><span class="p">,</span> <span class="s1">&#39;AB8574&#39;</span><span class="p">,</span> <span class="s1">&#39;784E3D&#39;</span><span class="p">,</span> <span class="s1">&#39;3D2216&#39;</span><span class="p">,</span> <span class="s1">&#39;26140C&#39;</span><span class="p">,</span> <span class="s1">&#39;000000&#39;</span><span class="p">]</span>
 <span class="p">};</span>
 
-<span class="c1">// Center map and add layers</span>
-<span class="nb">Map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">24.83</span><span class="p">,</span><span class="w"> </span><span class="mf">19.88</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
-<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">dataset</span><span class="p">,</span><span class="w"> </span><span class="nx">vis_a</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Aboveground biomass carbon&#39;</span><span class="p">);</span>
-<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">dataset</span><span class="p">,</span><span class="w"> </span><span class="nx">vis_b</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Belowground biomass carbon&#39;</span><span class="p">);</span>
+<span class="o">//</span> <span class="n">Center</span> <span class="nb">map</span> <span class="ow">and</span> <span class="n">add</span> <span class="n">layers</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">24.83</span><span class="p">,</span> <span class="mf">19.88</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">vis_a</span><span class="p">,</span> <span class="s1">&#39;Aboveground biomass carbon&#39;</span><span class="p">);</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">vis_b</span><span class="p">,</span> <span class="s1">&#39;Belowground biomass carbon&#39;</span><span class="p">);</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p><img alt="" src="https://i.imgur.com/7hkdrV0.png" />
 Note the belowground now shows up on top–turn off by clicking the checkmark in the layers tab or to view it first reverse the order of the code, e.g., line 22 moved to 21. You can also control layers by altering the Map.addLayer function adding False to add the layer, but it won’t be turned on in the map (until you click it on):</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">dataset</span><span class="p">,</span><span class="w"> </span><span class="nx">vis_b</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Belowground biomass carbon&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">vis_b</span><span class="p">,</span> <span class="s1">&#39;Belowground biomass carbon&#39;</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span>
 </pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="aoi-clip">
@@ -474,19 +502,27 @@ Note the belowground now shows up on top–turn off by clicking the checkmark in
 <p>Click on the square ‘Draw a Rectangle’ button highlighted and draft a square in the area</p>
 <p><img alt="" src="https://i.imgur.com/Il9YmB4.png" />
 That will add a layer in the imports section of the top of your code called geometry. I have changed the name by double clicking the layer name to call it bbox, but you can use the name geometry, just remember to change the name from the code offered below from bbox to geometry. Under the dataset variable change the code to the ImageCollection as follows. Note the end of the dataset line no longer has a semicolon but that has been moved to the function added to the dataset variable to clip to the bbox (replace this with geometry if you don’t rename the added rectangle).</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Add global carbon density map</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">dataset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;NASA/ORNL/biomass_carbon_density/v1&#39;</span><span class="p">)</span>
-<span class="w">                    </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">){</span><span class="k">return</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">clip</span><span class="p">(</span><span class="nx">bbox</span><span class="p">)});</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Add</span> <span class="k">global</span> <span class="n">carbon</span> <span class="n">density</span> <span class="nb">map</span>
+<span class="n">var</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s1">&#39;NASA/ORNL/biomass_carbon_density/v1&#39;</span><span class="p">)</span>
+                    <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">image</span><span class="p">){</span><span class="k">return</span> <span class="n">image</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">bbox</span><span class="p">)});</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p>Run everything again and turn of the geometry by clicking on geometry imports and unchecking the AOI you added.</p>
 <p>One thing that might help this map is changing the basemap. This can be relatively simply or complicated in Earth Engine. To get to map layers you want, is simple but requires a lot of code lines. Going to <a class="reference external" href="http://snazzymap.com">snazzymap.com</a>, selecting a basemap you like and copying the javascript can help with this. We’ll choose simple gray. Adding it to the map adds about 130 lines of code to your map, but don’t be scared, you can paste this below the main part of your code copy everything including the brackets and add a couple of code lines as follows</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Change basemap to snazzymaps.com subtle gray</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">gray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Change</span> <span class="n">basemap</span> <span class="n">to</span> <span class="n">snazzymaps</span><span class="o">.</span><span class="n">com</span> <span class="n">subtle</span> <span class="n">gray</span>
+<span class="n">var</span> <span class="n">gray</span> <span class="o">=</span> <span class="p">[</span>
 <span class="s1">&#39;all the lines of javascript code&#39;</span>
 <span class="p">]</span>
-<span class="nb">Map</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">(</span><span class="s1">&#39;Gray&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">gray</span><span class="o">:</span><span class="w"> </span><span class="nx">gray</span><span class="p">});</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">setOptions</span><span class="p">(</span><span class="s1">&#39;Gray&#39;</span><span class="p">,</span> <span class="p">{</span><span class="n">gray</span><span class="p">:</span> <span class="n">gray</span><span class="p">});</span>
 </pre></div>
+</div>
+</div>
 </div>
 <p>Once you hit enter you’ll have ‘gray’ as an additional map option in the middle right portion of your screen to go along with the default ‘Map’ and ‘Satellite’ options. Earth Engine has other defaults you can add without a lot of code and can be found <a class="reference external" href="https://developers.google.com/earth-engine/tutorials/community/customizing-base-map-styles">here</a>.</p>
 <p><img alt="" src="https://i.imgur.com/X16YsFz.png" /></p>
@@ -532,12 +568,12 @@ That will add a layer in the imports section of the top of your code called geom
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="foss.html"
+       href="01_foss.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Free &amp; Open Source</p>
+        <p class="prev-next-title">FOSS</p>
       </div>
     </a>
     <a class="right-next"
