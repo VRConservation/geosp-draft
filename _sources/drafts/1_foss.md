@@ -1,4 +1,4 @@
-# Free & Open Source
+# FOSS4
 
 Geospatial skills costing you money article from mapscaping
 Modern geospatial article from mapscaping
