@@ -1,15 +1,18 @@
 # Book settings
-# Learn more at https://jupyterbook.org/customize/config.html
-
 title: Free and Open Source Geospatial Solutions
 author: Vance Russell
-copyright: 2024
+copyright: "2024"
 logo: logo.png
 
-# Force re-execution of notebooks on each build.
+# Execution settings: Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
+
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
+  notebook_interface: "jupyterlab"
+  binderhub_url: "https://mybinder.org" 
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -31,3 +34,4 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  favicon: "favicon.ico"

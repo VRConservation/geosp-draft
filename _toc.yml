@@ -3,15 +3,21 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: author
-- file: 01_foss
-- file: 02_gee
-- file: 03_proscons
-- file: 04_python
-- file: 05_qgis
-- file: 06_sql
-- file: 07_aiml
-- file: 08_R
-- file: 09_next
-- file: bibliography   
+parts:
+  - caption: Overview
+    chapters:
+      - file: author
+  - caption: Chapters
+    chapters:
+      - file: 01_foss
+      - file: 02_gee
+      - file: 03_proscons
+      - file: 04_python
+      - file: 05_qgis
+      - file: 06_sql
+      - file: 07_aiml
+      - file: 08_R
+      - file: 09_next
+  - caption: Appendices
+    chapters:
+      - file: bibliography   
