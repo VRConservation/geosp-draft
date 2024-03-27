@@ -1,11 +1,6 @@
 
 # Pros & Cons
 
-```{contents}
-:local:
-:depth: 2
-```
-
 ## Open source vs. paid
 Navigating the world of open source and subscription-based geospatial tools is challenging. It can also be costly when you pay for software, imagery, and technicians to conduct your analyses. 
 ## False dichotomy
