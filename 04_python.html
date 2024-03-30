@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Python for Google Earth Engine &#8212; Free and Open Source Geospatial Solutions</title>
+    <title>4. Geospatial Python &#8212; Free and Open Source Geospatial Solutions</title>
   
   
   
@@ -61,8 +61,8 @@
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="QGIS" href="05_qgis.html" />
-    <link rel="prev" title="Pros &amp; Cons" href="03_proscons.html" />
+    <link rel="next" title="5. QGIS" href="05_qgis.html" />
+    <link rel="prev" title="3. Pros &amp; Cons" href="03_proscons.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -173,7 +173,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Intro
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -183,15 +183,14 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01_foss.html">FOSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_gee.html">Google Earth Engine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_proscons.html">Pros &amp; Cons</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Python for Google Earth Engine</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="05_qgis.html">QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_sql.html">SQL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_aiml.html">AI &amp; ML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="08_R.html">R &amp; RStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_foss.html">1. FOSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_gee.html">2. Google Earth Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_proscons.html">3. Pros &amp; Cons</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Geospatial Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_qgis.html">5. QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_sql.html">6. SQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_aiml.html">7. AI &amp; ML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_R.html">8. R &amp; RStudio</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
@@ -250,7 +249,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/git/https%3A//github.com/VRConservation/geosp/tree/main/master?urlpath=lab/tree/docs/04_python.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/VRConservation/geosp/master?urlpath=lab/tree/docs/04_python.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -268,7 +267,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/tree/main/blob/master/docs/04_python.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/VRConservation/geosp/blob/master/docs/04_python.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +298,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp/tree/main" target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -316,7 +315,7 @@
       
       
       
-      <li><a href="https://github.com/VRConservation/geosp/tree/main/issues/new?title=Issue%20on%20page%20%2F04_python.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/VRConservation/geosp/issues/new?title=Issue%20on%20page%20%2F04_python.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -417,9 +416,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -430,21 +427,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Python for Google Earth Engine</h1>
+    <h1>Geospatial Python</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python for Google Earth Engine</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-these-items">Adding these items</a></li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -454,15 +441,28 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="python-for-google-earth-engine">
-<h1>Python for Google Earth Engine<a class="headerlink" href="#python-for-google-earth-engine" title="Link to this heading">#</a></h1>
-<p>adding a few items for this notebook</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="adding-these-items">
-<h1>Adding these items<a class="headerlink" href="#adding-these-items" title="Link to this heading">#</a></h1>
-<p>geemap
-leafmap
-Alex Leith find and load sentinel 2 data on github gist: <a class="reference external" href="https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce">https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce</a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="geospatial-python">
+<h1><span class="section-number">4. </span>Geospatial Python<a class="headerlink" href="#geospatial-python" title="Link to this heading">#</a></h1>
+<p><strong>Find and Load Sentinel-2 Data</strong></p>
+<p>Code from Alex Leith’s github <a class="reference external" href="https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce">gist</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Uncomment line below to install pystac and odc</span>
+<span class="c1"># pip install pystac-client odc-stac odc-geo</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import dependencies</span>
+<span class="kn">from</span> <span class="nn">pystac_client</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span> <span class="nn">odc.stac</span> <span class="kn">import</span> <span class="n">load</span>
+<span class="kn">import</span> <span class="nn">odc.geo.xr</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -501,7 +501,7 @@ Alex Leith find and load sentinel 2 data on github gist: <a class="reference ext
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Pros &amp; Cons</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Pros &amp; Cons</p>
       </div>
     </a>
     <a class="right-next"
@@ -509,7 +509,7 @@ Alex Leith find and load sentinel 2 data on github gist: <a class="reference ext
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">QGIS</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>QGIS</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -520,22 +520,7 @@ Alex Leith find and load sentinel 2 data on github gist: <a class="reference ext
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python for Google Earth Engine</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-these-items">Adding these items</a></li>
-</ul>
-
-  </nav></div>
-
-</div></div>
+                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
