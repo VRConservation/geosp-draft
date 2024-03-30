@@ -1,4 +1,4 @@
-# Intro
+# Introduction
 
 Welcome! Free and Open Source Geospatial Solutions provides resources and examples of open source geospatial software and solutions. Please cite as 
 

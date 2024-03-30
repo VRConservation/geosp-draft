@@ -9,6 +9,7 @@ logo: logo.png
 execute:
   execute_notebooks: force
 
+# Launch button settings
 launch_buttons:
   colab_url: "https://colab.research.google.com"
   notebook_interface: "jupyterlab"
@@ -25,7 +26,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/VRConservation/geosp/tree/main  # Online location of your book
+  url: https://github.com/VRConservation/geosp  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
