@@ -11,7 +11,7 @@ Table 1 is a non-exhaustive and very brief summary of the more commonly used geo
 
 Table 1. Pros and cons of select geospatial software providers.
 
-| SOFTWARE | PROS      | CONS            | Price |
+| SOFTWARE | PROS      | CONS            | PRICE |
 | :------- | :------   | :-------        | ----: |
 | ArcGIS Pro | Use, Support, Vis | Price, Credits, Notebooks | $100-6,000+/user/yr |
 | CARTO | Use, Vis, Data | Haven't used | High |
