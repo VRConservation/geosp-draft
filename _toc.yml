@@ -5,6 +5,7 @@ format: jb-book
 root: intro
 parts:
   - caption: Overview
+    numbered: True
     chapters:
       - file: author
   - caption: Chapters
