@@ -416,7 +416,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -432,6 +434,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-these-items">4.1. Adding these items</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">4.2. Resources</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -443,26 +454,18 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="geospatial-python">
 <h1><span class="section-number">4. </span>Geospatial Python<a class="headerlink" href="#geospatial-python" title="Link to this heading">#</a></h1>
-<p><strong>Find and Load Sentinel-2 Data</strong></p>
-<p>Code from Alex Leith’s github <a class="reference external" href="https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce">gist</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Uncomment line below to install pystac and odc</span>
-<span class="c1"># pip install pystac-client odc-stac odc-geo</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import dependencies</span>
-<span class="kn">from</span> <span class="nn">pystac_client</span> <span class="kn">import</span> <span class="n">Client</span>
-<span class="kn">from</span> <span class="nn">odc.stac</span> <span class="kn">import</span> <span class="n">load</span>
-<span class="kn">import</span> <span class="nn">odc.geo.xr</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>Python is widely applicable and used in the geospatial community. ArcGIS Pro has a python package called Arcpy and QGIS has a packaged named PYQGIS.</p>
+<section id="adding-these-items">
+<h2><span class="section-number">4.1. </span>Adding these items<a class="headerlink" href="#adding-these-items" title="Link to this heading">#</a></h2>
+<p>geemap
+leafmap</p>
+</section>
+<section id="resources">
+<h2><span class="section-number">4.2. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Ujaval Gandhi, Spatial Thoughts. Free course on <a class="reference external" href="https://courses.spatialthoughts.com/python-foundation.html">Python Foundation for Spatial Analysis</a>.</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -520,7 +523,21 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-these-items">4.1. Adding these items</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">4.2. Resources</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
