@@ -149,7 +149,8 @@ For the map we just made, you would likely want to add some additional functiona
 ## Resources
 There are many resources for getting started to advanced use of Google Earth Engine:
 
-- Ujaval Gandhi, Spatial Thoughts. [End-to-End Google Earth Engine](https://courses.spatialthoughts.com/end-to-end-gee.html) full course materials starts with setting up the Earth Engine environment and moves into more advanced topics such machine learning and change detection.
-- Remote Sensing with GEE. If you want to get serious about Google Earth Engine, I highly recommend you read the free online Cloud-Based Remote Sensing with Google Earth Engine [book](https://www.eefabook.org/) by Rebecca Moore et al. This book is worth reading as a remote sensing textbook and guides you through nearly everything from basic to complex using Earth Engine.
-- GEE Google Group. For answers to many other questions the Google Earth Engine Developers [listserv](https://groups.google.com/g/google-earth-engine-developers) is quite useful.
-- Awesome GEE. An incredible curated list of GEE resources can be found in at the opengeos [Awesome-GEE](https://github.com/opengeos/Awesome-GEE) github repo. This incredible resource has everything from getting started to courses, papers, datasets, and much more. You could lose yourself for days in here!
+- **Spatial Thoughts, Ujaval Gandhi**. [End-to-End Google Earth Engine](https://courses.spatialthoughts.com/end-to-end-gee.html) provides full course materials starts with setting up the Earth Engine environment and moves into more advanced topics such machine learning and change detection.
+- **Remote Sensing with GEE**. If you want to get serious about Google Earth Engine, I highly recommend you read the free online Cloud-Based Remote Sensing with Google Earth Engine [book](https://www.eefabook.org/) by Rebecca Moore et al. This book is worth reading as a remote sensing textbook and guides you through nearly everything from basic to complex using Earth Engine.
+- **Awesome-GEE**. An incredible curated list of GEE resources can be found in at the opengeos [Awesome-GEE](https://github.com/opengeos/Awesome-GEE) github repo. This incredible resource has everything from getting started to courses, papers, datasets, and much more. You could lose yourself for days in here!
+- **GEE Google Group**. For answers to many other questions the Google Earth Engine Developers [listserv](https://groups.google.com/g/google-earth-engine-developers) is quite useful.
+
