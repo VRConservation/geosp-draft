@@ -6,7 +6,7 @@ Then I found geemap and leafmap, incredible user friendly python packages develo
 
 ## Getting Started
 
-See the [Resources](geemap:resources) section for more information.
+See the 5.4 Resources for more information.
 
 ## Sentinel-2 Data
 
@@ -50,7 +50,7 @@ data[["red", "green", "blue"]].isel(time=2).to_array().plot.imshow(vmin=0, vmax=
 # Alternately, we could visualise using odc.geo.xr's explore function
 # data.isel(time=2).explore(bands=["red", "green", "blue"], vmin=0, vmax=1500)
 ```
-This will give you something like the following
+To give you this Sentinel-2 imagec
 
 ![](https://i.imgur.com/ea6GCzY.png)
 
@@ -62,7 +62,6 @@ The access and sharing of this code is another example of why free and open sour
 
 
 
-(geemap:resources)=
 ## Resources
 
 - **Geemap,**.
