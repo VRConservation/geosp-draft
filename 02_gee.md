@@ -9,7 +9,9 @@ You need to do a quick exploratory data analysis of above and below ground carbo
 Yes! You've heard of this, you're thinking Google Earth, it will be easy, but you check out Earth Engine and find a console with an empty map and the required Javascript coding is another universe, let alone language, to you. 
 
 ## DIY
-OK, so this is even if you have a GIS guy down the hall with the defunct plotter. Many of you are too small and can't afford to pay someone or a consultant to conduct your geospatial analysis. How do you DIY it? Free and open source software (FOSS), or FOSS4G when it refers to free and open source geospatial, is readily available, and, much better than a costly yearly subscription fee it is free. Contrary to popular opinion, it's not that difficult to start. Here's how:
+OK, so this is even if you have a GIS guy down the hall with the defunct plotter. Many of you are too small and can't afford to pay someone or a consultant to conduct your geospatial analysis. How do you DIY it? Free and open source software (FOSS), or FOSS4G when it refers to free and open source geospatial, is readily available, and, much better than a costly yearly subscription fee it is free. Contrary to popular opinion, it's not that difficult to start. The full code for this example can be found [here](https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2).
+
+Here's how:
 
 Once you log into [Earth Engine](https://code.earthengine.google.com/), search for 'carbon' in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select see example: 
 
@@ -139,7 +141,7 @@ All together the map now looks like the following (with the belowground layer tu
 
 ![](https://i.imgur.com/uoXwumv.png)
 
-Congratulations, you've made your first Earth Engine map. Selecting the inspector pane in the top right allows you to click anywhere in the map to get coordinates and carbon values at the pixel level.
+The full code is [here](https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2). Congratulations, you've made your first Earth Engine map. Selecting the inspector pane in the top right allows you to click anywhere in the map to get coordinates and carbon values at the pixel level. 
 
 ## Geospatial EDA
 This type of exploratory data analysis (EDA) is extraordinarily useful to quickly look at large datasets of multiple types of biotic and abiotic data that the Earth Engine Catalog offers. You can search for any set in the catalog, click on sample and get an instantaneous view of the data. In reality, this is almost akin to no-code. It also computes and adds any layer in the cloud, so it doesn't matter how old or slow your computer is, you can run the geospatial computations in the cloud. This is a tremendous advantage, especially for more complex analyses.
@@ -153,4 +155,3 @@ There are many resources for getting started to advanced use of Google Earth Eng
 - **Remote Sensing with GEE**. If you want to get serious about Google Earth Engine, I highly recommend you read the free online Cloud-Based Remote Sensing with Google Earth Engine [book](https://www.eefabook.org/) by Rebecca Moore et al. This book is worth reading as a remote sensing textbook and guides you through nearly everything from basic to complex using Earth Engine.
 - **Awesome-GEE**. An incredible curated list of GEE resources can be found in at the opengeos [Awesome-GEE](https://github.com/opengeos/Awesome-GEE) github repo. This incredible resource has everything from getting started to courses, papers, datasets, and much more. You could lose yourself for days in here!
 - **GEE Google Group**. For answers to many other questions the Google Earth Engine Developers [listserv](https://groups.google.com/g/google-earth-engine-developers) is quite useful.
-

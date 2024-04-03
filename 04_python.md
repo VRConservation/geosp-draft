@@ -10,7 +10,9 @@ See the 5.4 Resources for more information.
 
 ## Sentinel-2 Data
 
-Let's look at a simple example from a github [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. Note when programmers say to uncomment a line, in python it means removing the hashtag before the command, or click on the line and hit control or command /. Install the dependencies:
+Let's look at a simple example from a github [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. Note when programmers say to uncomment a line, in python it means removing the hashtag before the command, or click on the line and hit control or command plus back slash (/). 
+
+Install the dependencies:
 
 ```python
 # Uncomment line below to install pystac and odc
@@ -27,7 +29,7 @@ collection = "sentinel-2-l2a"
 # The bounding box is lower-left x, lower-left y, upper-right x, upper-right y
 bbox = [146.5, -43.6, 146.7, -43.4]
 ```
-Search and load the data
+Search and load the data:
 
 ```python
 # Datetime can be a single date, like YEAR, YEAR-MONTH or YEAR-MONTH-DAY
@@ -40,7 +42,7 @@ search = client.search(collections=[collection], bbox=bbox, datetime=datetime)
 # Pass the search results to the load function, which will lazy-load the data
 data = load(search.items(), bbox=bbox, groupby="solar_day", chunks={}, crs="EPSG:8857", resolution=10)
 ```
-Visualize it!
+Visualize it:
 
 ```python
 # Visualize the data
@@ -50,7 +52,7 @@ data[["red", "green", "blue"]].isel(time=2).to_array().plot.imshow(vmin=0, vmax=
 # Alternately, we could visualise using odc.geo.xr's explore function
 # data.isel(time=2).explore(bands=["red", "green", "blue"], vmin=0, vmax=1500)
 ```
-To give you this Sentinel-2 imagec
+Sentinel-2 true color image:
 
 ![](https://i.imgur.com/ea6GCzY.png)
 
