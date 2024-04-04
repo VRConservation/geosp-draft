@@ -17,7 +17,7 @@ The intended audience for this book is beginners to geospatial analysis with som
 1. FOSS. Free and open source software introduction and a little about my journey in this field and using these tools.
 2. GEE. Google Earth Engine is an incredible resource for cloud geospatial computer. Here's how to get started.
 
-## JUPYTER{book}
+## jupyter{book}
 
 
 

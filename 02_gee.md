@@ -1,7 +1,11 @@
 # Google Earth Engine
 
-## TL;DR
+**Your intro to geospatial analysis in the cloud**.
 
+## TL;DR
+- See the [Cloud-Based Remote Sensing with Google Earth Engine](https://www.eefabook.org/go-to-the-book.html) book or the [GEE Course](https://spatialthoughts.com/courses/google-earth-engine/) from Spatial Thoughts to get started.
+- GEE's strength is cloud-based analysis; not visualization. See Chapters 4, 5, and 8 for better visualization/cartographic tools.
+- See Chapter 4 and [Geemap](https://geemap.org/) for an easier way to deploy GEE.
 
 ## Scenario
 You need to do a quick exploratory data analysis of above and below ground carbon biomass for an area of interest near Lake Tahoe in the Central Sierra, California. A donor has asked you to this by end of the week. You go down the hall to the right where the map plotters are and ask the GIS guy. He peers up above his array of screens, says he's busyworking on a dozen other projects, he might be able to get you something in 2 weeks. He suggests you check out Google Earth Enginge.
@@ -18,6 +22,7 @@ Once you log into [Earth Engine](https://code.earthengine.google.com/), search f
 ![aboveground | 500](https://i.imgur.com/z3xt9WD.png)
 
 That will open a new code editor with the following javascript code:
+
 ```javascript
 var dataset = ee.ImageCollection('NASA/ORNL/biomass_carbon_density/v1');
 
@@ -33,7 +38,7 @@ Map.setCenter(-60.0, 7.0, 4);
 Map.addLayer(dataset, visualization, 'Aboveground biomass carbon');
 ```
 
- Hitting run will gives you a basic map of aboveground biomass:
+ Clicking run will gives you a basic map of aboveground biomass:
  
 ![](https://i.imgur.com/m7dOCRr.png)
 

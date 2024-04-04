@@ -458,8 +458,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="google-earth-engine">
 <h1><span class="section-number">3. </span>Google Earth Engine<a class="headerlink" href="#google-earth-engine" title="Link to this heading">#</a></h1>
+<p><strong>Your intro to geospatial analysis in the cloud</strong>.</p>
 <section id="tl-dr">
 <h2><span class="section-number">3.1. </span>TL;DR<a class="headerlink" href="#tl-dr" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>See the <a class="reference external" href="https://www.eefabook.org/go-to-the-book.html">Cloud-Based Remote Sensing with Google Earth Engine</a> book or the <a class="reference external" href="https://spatialthoughts.com/courses/google-earth-engine/">GEE Course</a> from Spatial Thoughts to get started.</p></li>
+<li><p>GEE’s strength is cloud-based analysis; not visualization. See Chapters 4, 5, and 8 for better visualization/cartographic tools.</p></li>
+<li><p>See Chapter 4 and <a class="reference external" href="https://geemap.org/">Geemap</a> for an easier way to deploy GEE.</p></li>
+</ul>
 </section>
 <section id="scenario">
 <h2><span class="section-number">3.2. </span>Scenario<a class="headerlink" href="#scenario" title="Link to this heading">#</a></h2>
@@ -468,7 +474,8 @@ document.write(`
 </section>
 <section id="diy">
 <h2><span class="section-number">3.3. </span>DIY<a class="headerlink" href="#diy" title="Link to this heading">#</a></h2>
-<p>OK, so this is even if you have a GIS guy down the hall with the defunct plotter. Many of you are too small and can’t afford to pay someone or a consultant to conduct your geospatial analysis. How do you DIY it? Free and open source software (FOSS), or FOSS4G when it refers to free and open source geospatial, is readily available, and, much better than a costly yearly subscription fee it is free. Contrary to popular opinion, it’s not that difficult to start. Here’s how:</p>
+<p>OK, so this is even if you have a GIS guy down the hall with the defunct plotter. Many of you are too small and can’t afford to pay someone or a consultant to conduct your geospatial analysis. How do you DIY it? Free and open source software (FOSS), or FOSS4G when it refers to free and open source geospatial, is readily available, and, much better than a costly yearly subscription fee it is free. Contrary to popular opinion, it’s not that difficult to start. The full code for this example can be found <a class="reference external" href="https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2">here</a>.</p>
+<p>Here’s how:</p>
 <p>Once you log into <a class="reference external" href="https://code.earthengine.google.com/">Earth Engine</a>, search for ‘carbon’ in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select see example:</p>
 <p><img alt="aboveground | 500" src="https://i.imgur.com/z3xt9WD.png" /></p>
 <p>That will open a new code editor with the following javascript code:</p>
@@ -498,7 +505,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Hitting run will gives you a basic map of aboveground biomass:</p>
+<p>Clicking run will gives you a basic map of aboveground biomass:</p>
 <p><img alt="" src="https://i.imgur.com/m7dOCRr.png" /></p>
 <p>You can zoom in or out and click the layer on or off. Selecting the inspector in the upper right panel will allow you to click on any pixel in the map and get the information from the raster displayed:</p>
 <p><img alt="" src="https://i.imgur.com/LZcLWWh.png" /></p>
@@ -607,7 +614,7 @@ document.write(`
 <p><img alt="" src="https://i.imgur.com/X16YsFz.png" /></p>
 <p>All together the map now looks like the following (with the belowground layer turned off):</p>
 <p><img alt="" src="https://i.imgur.com/uoXwumv.png" /></p>
-<p>Congratulations, you’ve made your first Earth Engine map. Selecting the inspector pane in the top right allows you to click anywhere in the map to get coordinates and carbon values at the pixel level.</p>
+<p>The full code is <a class="reference external" href="https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2">here</a>. Congratulations, you’ve made your first Earth Engine map. Selecting the inspector pane in the top right allows you to click anywhere in the map to get coordinates and carbon values at the pixel level.</p>
 </section>
 <section id="geospatial-eda">
 <h2><span class="section-number">3.5. </span>Geospatial EDA<a class="headerlink" href="#geospatial-eda" title="Link to this heading">#</a></h2>
