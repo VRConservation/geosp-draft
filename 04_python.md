@@ -10,7 +10,10 @@ See the 5.4 Resources for more information.
 
 ## Sentinel-2 Data
 
-Let's look at a simple example from a github [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. Note when programmers say to uncomment a line, in python it means removing the hashtag before the command, or click on the line and hit control or command plus back slash (/). 
+Let's look at a simple example from a github [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. Open [colab](https://colab.research.google.com/) and click the blue 'New notebook' button.
+
+```{note} 'Uncommenting' a line in python means removing the hashtag before the command, or click on the line then click control or command plus back slash (/).
+```
 
 Install the dependencies:
 
@@ -59,15 +62,74 @@ Sentinel-2 true color image:
 The access and sharing of this code is another example of why free and open source is special, the community is willing to share it it is reproduceable, and easily modified to meet your needs. Thanks to Alex Leith for sharing this.
 
 ## Geemap
+Compared to using Javascript, Geemap is a much easier way to access, analyze, and visualize Earth Engine data all within a python package environment developed by [Quisheng Wu](https://github.com/giswqs).
 
+```{admonition} Getting Started
+Watch this [installation video](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) followed by this [vs code and github](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) video. If you already have an IDE, miniconda, and virtual env's installed, go to the Geemap [installation](https://geemap.org/installation/) page.
+```
 
+Let's look at how to visualize the same map from Chapter 2 using Geemap. Open a jupyter notebook and add the following codeblock:
+
+```python
+# Import geemap and create an interactive map
+import ee
+import geemap
+geemap.ee_initialize()
+m = geemap.Map()
+m
+```
+That will will give you a generic world map and several map widgets:
+
+![](https://i.imgur.com/hKl0roO.png)
+
+In the upper right corner of the map, click the wrench icon then click the two encircling arrows box (bottom row, middle) to open the Javascript to Python code converter:
+
+![](https://i.imgur.com/XXdWssh.png)
+
+Go to your Earth Engine File, open the code from Chapter 2 and select all and paste it into the converter. Click on convert. The code is copied to the clipboard. Paste it into a new codeblock and comment out the definition function on lines 4-6:
+
+```python
+# Add global carbon density map
+dataset = ee.ImageCollection('NASA/ORNL/biomass_carbon_density/v1')
+
+# def func_rif(image)return image.clip(bbox)};: \
+#                     .map(function(image){return image.clip(bbox)} \
+#                     .map(func_rif)
+
+# Add visual parameter variables
+vis_a = {
+  'bands': ['agb'],
+  'min': -50.0,
+  'max': 80.0,
+  'palette': ['d9f0a3', 'addd8e', '78c679', '41ab5d', '238443', '005a32']
+}
+
+vis_b = {
+  'bands': ['bgb'],
+  'min': -50.0,
+  'max': 80.0,
+  'palette': ['D6BCB1', 'AB8574', '784E3D', '3D2216', '26140C', '000000']
+}
+
+# Center map and add layers
+m.setCenter(-120.2348, 38.8744, 9)
+m.addLayer(dataset, vis_a, 'Aboveground biomass carbon')
+m.addLayer(dataset, vis_b, 'Belowground biomass carbon')
+```
+Running that code block will give you the following:
+
+![](https://i.imgur.com/uAQ9wBz.jpeg)
+
+If you return to the wrench icon and select layers to the left you can switch layers on and off
+
+![](https://i.imgur.com/RzJfVjV.png)
 
 
 
 ## Resources
 
-- **Geemap,**.
-- **Leafmap,**.
-- **Opengeos**.
-- **Ujaval Gandhi, Spatial Thoughts**. Free course on [Python Foundation for Spatial Analysis](https://courses.spatialthoughts.com/python-foundation.html).
-- **Dorman et al**. [Geocomputation with Python](https://py.geocompx.org/) is an open source book inspired by the FOSS4G movement. 
+- [Geemap](https://geemap.org/) has a webpage, book, tutorials, API, and much more to support this excellent Python package.
+- [Leafmap](https://leafmap.org/) is a Python package for geospatial analysis in a Jupyter environment. Superb documentation, tutorials, and ease of use.
+- [Open Geospatial Solutions](https://github.com/opengeos) host many open-source geospatial software projects and datasets.
+- [Spatial Thoughts](https:spatialthoughts.com) run by Ujaval Gandhi has a free course called [Python Foundation for Spatial Analysis](https://courses.spatialthoughts.com/python-foundation.html). The site has many other free and paid courses and tutorials for geospatial analysis.
+- [Geocomputation with Python](https://py.geocompx.org/) is an open source book inspired by the FOSS4G movement. 

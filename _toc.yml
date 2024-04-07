@@ -4,10 +4,6 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Overview
-    numbered: True
-    chapters:
-      - file: author
   - caption: Chapters
     numbered: True
     chapters:
@@ -22,4 +18,5 @@ parts:
       - file: 09_next
   - caption: Appendices
     chapters:
+      - file: author
       - file: bibliography   
