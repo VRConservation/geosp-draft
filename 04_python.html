@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5. Geospatial Python &#8212; Free and Open Source Geospatial Solutions</title>
+    <title>4. Geospatial Python &#8212; Free and Open Source Geospatial Solutions</title>
   
   
   
@@ -61,8 +61,8 @@
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="6. QGIS" href="05_qgis.html" />
-    <link rel="prev" title="4. Pros &amp; Cons" href="03_proscons.html" />
+    <link rel="next" title="5. QGIS" href="05_qgis.html" />
+    <link rel="prev" title="3. Pros &amp; Cons" href="03_proscons.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -177,23 +177,20 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="author.html">1. Author</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01_foss.html">2. FOSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_gee.html">3. Google Earth Engine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_proscons.html">4. Pros &amp; Cons</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Geospatial Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_qgis.html">6. QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_sql.html">7. SQL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_aiml.html">8. AI &amp; ML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="08_R.html">9. R &amp; RStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_foss.html">1. FOSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_gee.html">2. Google Earth Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_proscons.html">3. Pros &amp; Cons</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Geospatial Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_qgis.html">5. QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_sql.html">6. SQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_aiml.html">7. AI &amp; ML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_R.html">8. R &amp; RStudio</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="author.html">Author</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 
@@ -439,10 +436,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">5.1. Getting Started</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2-data">5.2. Sentinel-2 Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geemap">5.3. Geemap</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">5.4. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">4.1. Getting Started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2-data">4.2. Sentinel-2 Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geemap">4.3. Geemap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">4.4. Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -455,16 +452,20 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="geospatial-python">
-<h1><span class="section-number">5. </span>Geospatial Python<a class="headerlink" href="#geospatial-python" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">4. </span>Geospatial Python<a class="headerlink" href="#geospatial-python" title="Link to this heading">#</a></h1>
 <p>Python is widely applicable and used in the geospatial community. ArcGIS Pro has a python package called Arcpy and QGIS has a packaged named PYQGIS. However, Arcpy is not easy or intuitive to use, even though it’s a python package. I tried it, I read an entire book on it, I struggled using the notebooks, which are slow to load and not easy to link to VS Code.</p>
 <p>Then I found geemap and leafmap, incredible user friendly python packages developed by Qiushen Wu and available on github at GISWQS, along with clear tutorials at <a class="reference external" href="http://leafmap.org">leafmap.org</a> and <a class="reference external" href="http://geemap.org">geemap.org</a> and videos at <a class="reference external" href="https://www.youtube.com/&#64;giswqs">Open Geospatial Solutions</a>. Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me and it opened up another world to using Python to rapidly analyse data.</p>
 <section id="getting-started">
-<h2><span class="section-number">5.1. </span>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.1. </span>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
 <p>See the 5.4 Resources for more information.</p>
 </section>
 <section id="sentinel-2-data">
-<h2><span class="section-number">5.2. </span>Sentinel-2 Data<a class="headerlink" href="#sentinel-2-data" title="Link to this heading">#</a></h2>
-<p>Let’s look at a simple example from a github <a class="reference external" href="https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce">gist</a> posted by Alex Leith. Note when programmers say to uncomment a line, in python it means removing the hashtag before the command, or click on the line and hit control or command plus back slash (/).</p>
+<h2><span class="section-number">4.2. </span>Sentinel-2 Data<a class="headerlink" href="#sentinel-2-data" title="Link to this heading">#</a></h2>
+<p>Let’s look at a simple example from a github <a class="reference external" href="https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce">gist</a> posted by Alex Leith. Open <a class="reference external" href="https://colab.research.google.com/">colab</a> and click the blue ‘New notebook’ button.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>‘Uncommenting’ a line in python means removing the hashtag before the command, or click on the line then click control or command plus back slash (/).</p>
+</div>
 <p>Install the dependencies:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -536,7 +537,7 @@ document.write(`
 <p>The access and sharing of this code is another example of why free and open source is special, the community is willing to share it it is reproduceable, and easily modified to meet your needs. Thanks to Alex Leith for sharing this.</p>
 </section>
 <section id="geemap">
-<h2><span class="section-number">5.3. </span>Geemap<a class="headerlink" href="#geemap" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.3. </span>Geemap<a class="headerlink" href="#geemap" title="Link to this heading">#</a></h2>
 <p>Compared to using Javascript, Geemap is a much easier way to access, analyze, and visualize Earth Engine data all within a python package environment developed by <a class="reference external" href="https://github.com/giswqs">Quisheng Wu</a>.</p>
 <div class="admonition-getting-started admonition">
 <p class="admonition-title">Getting Started</p>
@@ -555,7 +556,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>That will will give you a generic world map:</p>
+<p>That will will give you a generic world map and several map widgets:</p>
 <p><img alt="" src="https://i.imgur.com/hKl0roO.png" /></p>
 <p>In the upper right corner of the map, click the wrench icon then click the two encircling arrows box (bottom row, middle) to open the Javascript to Python code converter:</p>
 <p><img alt="" src="https://i.imgur.com/XXdWssh.png" /></p>
@@ -598,7 +599,7 @@ document.write(`
 <p><img alt="" src="https://i.imgur.com/RzJfVjV.png" /></p>
 </section>
 <section id="resources">
-<h2><span class="section-number">5.4. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.4. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://geemap.org/">Geemap</a> has a webpage, book, tutorials, API, and much more to support this excellent Python package.</p></li>
 <li><p><a class="reference external" href="https://leafmap.org/">Leafmap</a> is a Python package for geospatial analysis in a Jupyter environment. Superb documentation, tutorials, and ease of use.</p></li>
@@ -645,7 +646,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Pros &amp; Cons</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Pros &amp; Cons</p>
       </div>
     </a>
     <a class="right-next"
@@ -653,7 +654,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>QGIS</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>QGIS</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -673,10 +674,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">5.1. Getting Started</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2-data">5.2. Sentinel-2 Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geemap">5.3. Geemap</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">5.4. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">4.1. Getting Started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2-data">4.2. Sentinel-2 Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geemap">4.3. Geemap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">4.4. Resources</a></li>
 </ul>
   </nav></div>
 
