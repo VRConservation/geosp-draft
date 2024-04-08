@@ -78,7 +78,7 @@ geemap.ee_initialize()
 m = geemap.Map()
 m
 ```
-That will will give you a generic world map and several map widgets:
+That will will give you a generic world map with map widgets:
 
 ![](https://i.imgur.com/hKl0roO.png)
 
@@ -86,7 +86,7 @@ In the upper right corner of the map, click the wrench icon then click the two e
 
 ![](https://i.imgur.com/XXdWssh.png)
 
-Go to your Earth Engine File, open the code from Chapter 2 and select all and paste it into the converter. Click on convert. The code is copied to the clipboard. Paste it into a new codeblock and comment out the definition function on lines 4-6:
+Go to your Earth Engine [code editor](https://code.earthengine.google.com/), open the script from Chapter 2, select all, and paste it into the converter. Click the convert button. The code is copied to the clipboard. Paste it into a new codeblock and comment out the definition function on lines 4-6:
 
 ```python
 # Add global carbon density map
@@ -116,15 +116,50 @@ m.setCenter(-120.2348, 38.8744, 9)
 m.addLayer(dataset, vis_a, 'Aboveground biomass carbon')
 m.addLayer(dataset, vis_b, 'Belowground biomass carbon')
 ```
-Running that code block will give you the following:
+Running that block will give you the following:
 
 ![](https://i.imgur.com/uAQ9wBz.jpeg)
 
-If you return to the wrench icon and select layers to the left you can switch layers on and off
+If you return to the wrench icon and select the layers icon to the left you can switch layers on and off
 
 ![](https://i.imgur.com/RzJfVjV.png)
 
+Add a new code block and add an area of interest called bbox, short for bounding box:
 
+```{tip} To run the code in a code block click ctrl/command + enter. To run the code and add a new code block click alt + enter.
+```
+
+```python
+# Add an area of interest
+bbox = [-121.1874, 38.2931, -119.5262, 39.2884]
+bbox = ee.Geometry.Rectangle(bbox)
+```
+Then clip the carbon raster to the AOI:
+
+```python
+# Clip the dataset to the area of interest
+aoi = dataset.map(lambda image: image.clip(bbox))
+```
+Now add the clipped rasters:
+```python
+# Add the clipped dataset to the map
+m.addLayer(aoi, vis_b, 'AOI belowground biomass carbon')
+m.addLayer(aoi, vis_a, 'AOI aboveground biomass carbon')
+m
+```
+If you turn off the unclipped above and belowground maps your map will now look like
+
+![](https://i.imgur.com/DDRJeDF.png)
+
+Go ahead and delete the function from the javascript conversion that you commented out previously in lines 4-6. If you need to keep running and test the map you can also turn off the original biomass layers added for the entire globe by changing the add map layers to
+
+```python
+# Center map and add layers
+m.setCenter(-120.2348, 38.8744, 9)
+m.addLayer(dataset, vis_a, 'Aboveground biomass carbon', False)
+m.addLayer(dataset, vis_b, 'Belowground biomass carbon', False)
+```
+This still adds the layers to the map but turns them off by default.
 
 ## Resources
 
