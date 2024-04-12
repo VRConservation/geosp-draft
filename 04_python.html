@@ -186,7 +186,7 @@
 <li class="toctree-l1"><a class="reference internal" href="05_qgis.html">5. QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_sql.html">6. SQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_aiml.html">7. AI &amp; ML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="08_R.html">8. R &amp; RStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_R.html">8. R</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
@@ -439,7 +439,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">4.1. Getting Started</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2-data">4.2. Sentinel-2 Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geemap">4.3. Geemap</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">4.4. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leafmap">4.4. Leafmap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">4.5. Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -631,7 +632,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>If you turn off the unclipped above and belowground maps your map will now look like</p>
+<p>If you turn off the aboveground and belowground maps your map will now look like the following with only the clipped aboveground biomass carbon layer showing:</p>
 <p><img alt="" src="https://i.imgur.com/DDRJeDF.png" /></p>
 <p>Delete the function from the javascript conversion that you commented out previously in lines 4-6. If you need to keep running and test the map you can turn off the original biomass layers added for the entire globe by changing the center map add map layers to codeblock to</p>
 <div class="cell docutils container">
@@ -645,13 +646,30 @@ document.write(`
 </div>
 </div>
 <p>Adding ‘False’ after the layer name still adds the layers to the map but turns them off by default.</p>
-<p>Let’s take another look at the lambda function to clip the raster. Quoted from Copilot: “The lambda image: portion is needed because it defines an anonymous function that takes an image as input and returns the image clipped to the bounding box. In Python, lambda is a keyword that is used to create anonymous functions. These are functions that are not bound to a name at runtime. They are used when you need a small, one-off function that you don’t want to define separately. In the context of dataset.map(lambda image: image.clip(bbox)), the lambda image: portion is defining a function that takes an image, clips it to the bounding box, and returns the clipped image. This function is then applied to every image in the ImageCollection by the map() function. So, in simpler terms, lambda image: is saying “for each image in the ImageCollection, do the following operation”.”</p>
+<div class="admonition-lambda-function admonition">
+<p class="admonition-title">Lambda Function</p>
+<p>Let’s take another look at the lambda function to clip the raster. Lambda functions are similar to other python functions but are not bound to a name when run. Known as anonymous functions, they are used when you need a one-off functions that isn’t separately defined. In our case, the Lamda function takes an image, clips it to the bounding box and returns the clipped image. The map() function, not to be confused with the Map function in Javascript, applies the function to every image in the ImageCollection.</p>
+</div>
+</section>
+<section id="leafmap">
+<h2><span class="section-number">4.4. </span>Leafmap<a class="headerlink" href="#leafmap" title="Link to this heading">#</a></h2>
+<p>A related Python package worth exploring is <a class="reference external" href="https://leafmap.org/">Leafmap</a>, also developed by Quisheng Wu. Like Geemap the site has extensive documentation and tutorials. I highly recommend looking at one of the workshops that will guide you from installation to examples and many use cases.</p>
+<p>The tutorials and workshops are supported by notebooks and videos to thoroughly walk you through the use of this fantastic software package. Click on the links provided to run the code in binder or colab. If you wanted to run a workshop in VS Code:</p>
+<ol class="arabic simple">
+<li><p>Click workshops in <a class="reference external" href="http://leafmap.org">leafmap.org</a></p></li>
+<li><p>Select the workshop</p></li>
+<li><p>Select GitHub in the upper right, select examples then notebooks</p></li>
+<li><p>Click on the notebook you want (*.ipynb)</p></li>
+<li><p>Below history in the upper right of your browser, click on the download raw file button, save it, then click to open it in VS Code.</p></li>
+<li><p>Alternatively go straight to the workshop notebooks such as the <a class="reference external" href="https://github.com/opengeos/leafmap/blob/master/examples/workshops/FOSS4G_2021.ipynb">FOSS4G Workshop</a>.</p></li>
+</ol>
+<p>Make sure you have leafmap installed in your environment before running the code cells. See the Miniconda/Anaconda section of the FOSS4G workshop for a quick starter guide on how to do this.</p>
 </section>
 <section id="resources">
-<h2><span class="section-number">4.4. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.5. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://geemap.org/">Geemap</a> has a webpage, book, tutorials, API, and much more to support this excellent Python package.</p></li>
-<li><p><a class="reference external" href="https://leafmap.org/">Leafmap</a> is a Python package for geospatial analysis in a Jupyter environment. Superb documentation, tutorials, and ease of use.</p></li>
+<li><p><a class="reference external" href="https://leafmap.org/">Leafmap</a> is a Python package for geospatial analysis in a Jupyter environment. It has superb documentation, tutorials, and ease of use.</p></li>
 <li><p><a class="reference external" href="https://github.com/opengeos">Open Geospatial Solutions</a> host many open-source geospatial software projects and datasets.</p></li>
 <li><p><a class="reference external" href="https:spatialthoughts.com">Spatial Thoughts</a> run by Ujaval Gandhi has a free course called <a class="reference external" href="https://courses.spatialthoughts.com/python-foundation.html">Python Foundation for Spatial Analysis</a>. The site has many other free and paid courses and tutorials for geospatial analysis.</p></li>
 <li><p><a class="reference external" href="https://py.geocompx.org/">Geocomputation with Python</a> is an open source book inspired by the FOSS4G movement.</p></li>
@@ -726,7 +744,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">4.1. Getting Started</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2-data">4.2. Sentinel-2 Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geemap">4.3. Geemap</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">4.4. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leafmap">4.4. Leafmap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">4.5. Resources</a></li>
 </ul>
   </nav></div>
 
