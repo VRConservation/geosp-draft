@@ -147,7 +147,7 @@ m.addLayer(aoi, vis_b, 'AOI belowground biomass carbon')
 m.addLayer(aoi, vis_a, 'AOI aboveground biomass carbon')
 m
 ```
-If you turn off the unclipped above and belowground maps your map will now look like
+If you turn off the aboveground and belowground maps your map will now look like the following with only the clipped aboveground biomass carbon layer showing:
 
 ![](https://i.imgur.com/DDRJeDF.png)
 
@@ -161,12 +161,28 @@ m.addLayer(dataset, vis_b, 'Belowground biomass carbon', False)
 ```
 Adding 'False' after the layer name still adds the layers to the map but turns them off by default. 
 
-Let's take another look at the lambda function to clip the raster. Quoted from Copilot: "The lambda image: portion is needed because it defines an anonymous function that takes an image as input and returns the image clipped to the bounding box. In Python, lambda is a keyword that is used to create anonymous functions. These are functions that are not bound to a name at runtime. They are used when you need a small, one-off function that you don't want to define separately. In the context of dataset.map(lambda image: image.clip(bbox)), the lambda image: portion is defining a function that takes an image, clips it to the bounding box, and returns the clipped image. This function is then applied to every image in the ImageCollection by the map() function. So, in simpler terms, lambda image: is saying "for each image in the ImageCollection, do the following operation"."
+```{admonition} Lambda Function
+Let's take another look at the lambda function to clip the raster. Lambda functions are similar to other python functions but are not bound to a name when run. Known as anonymous functions, they are used when you need a one-off functions that isn't separately defined. In our case, the Lamda function takes an image, clips it to the bounding box and returns the clipped image. The map() function, not to be confused with the Map function in Javascript, applies the function to every image in the ImageCollection.
+```
+
+## Leafmap
+A related Python package worth exploring is [Leafmap](https://leafmap.org/), also developed by Quisheng Wu. Like Geemap the site has extensive documentation and tutorials. I highly recommend looking at one of the workshops that will guide you from installation to examples and many use cases.
+
+The tutorials and workshops are supported by notebooks and videos to thoroughly walk you through the use of this fantastic software package. Click on the links provided to run the code in binder or colab. If you wanted to run a workshop in VS Code:
+
+1. Click workshops in leafmap.org
+2. Select the workshop
+3. Select GitHub in the upper right, select examples then notebooks
+4. Click on the notebook you want (*.ipynb)
+5. Below history in the upper right of your browser, click on the download raw file button, save it, then click to open it in VS Code. 
+6. Alternatively go straight to the workshop notebooks such as the [FOSS4G Workshop](https://github.com/opengeos/leafmap/blob/master/examples/workshops/FOSS4G_2021.ipynb).
+
+Make sure you have leafmap installed in your environment before running the code cells. See the Miniconda/Anaconda section of the FOSS4G workshop for a quick starter guide on how to do this.
 
 ## Resources
 
 - [Geemap](https://geemap.org/) has a webpage, book, tutorials, API, and much more to support this excellent Python package.
-- [Leafmap](https://leafmap.org/) is a Python package for geospatial analysis in a Jupyter environment. Superb documentation, tutorials, and ease of use.
+- [Leafmap](https://leafmap.org/) is a Python package for geospatial analysis in a Jupyter environment. It has superb documentation, tutorials, and ease of use.
 - [Open Geospatial Solutions](https://github.com/opengeos) host many open-source geospatial software projects and datasets.
 - [Spatial Thoughts](https:spatialthoughts.com) run by Ujaval Gandhi has a free course called [Python Foundation for Spatial Analysis](https://courses.spatialthoughts.com/python-foundation.html). The site has many other free and paid courses and tutorials for geospatial analysis.
 - [Geocomputation with Python](https://py.geocompx.org/) is an open source book inspired by the FOSS4G movement. 
