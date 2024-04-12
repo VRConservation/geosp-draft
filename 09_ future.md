@@ -1,4 +1,4 @@
-# Next?
+# Future
 
 There's a lot to learn hear and open source usually requires more knowledge, more troubleshooting, but ultimately greater control over your data, analysis, outcomes, and visualization. It's a higher input = higher rewards kind of situation. This chapter provides some thoughts on where your learning and open source geospatial might go next.
 

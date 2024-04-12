@@ -15,7 +15,7 @@ parts:
       - file: 06_sql
       - file: 07_aiml
       - file: 08_R
-      - file: 09_next
+      - file: 09_future
   - caption: Appendices
     chapters:
       - file: author
