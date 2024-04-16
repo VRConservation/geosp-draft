@@ -12,7 +12,7 @@ Add photo of a def query before and after in Arc (with and w/o SQL)
 ## DuckDB
 We'll mostly use [DuckDB](https://duckdb.org/) for examples in this chapters. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript and just works. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter.
 
-Special thanks to Quishen Wu for how to use DuckDB from his [Geog-414 course](https://geog-414.gishub.org/) that has superb tutorials on Python, Earth Engine, DuckDB and PostGIS.
+Special thanks to Quisheng Wu for how to use DuckDB from his [Geog-414 course](https://geog-414.gishub.org/) that has superb tutorials on Python, Earth Engine, DuckDB and PostGIS.
 
 ## Installation
 
