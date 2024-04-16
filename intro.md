@@ -20,15 +20,15 @@ The intended audience for this book is beginners to geospatial analysis with som
 ## Chapters
 The book contains the following chapters:
 
-1. FOSS. Free and open source software introduction and a little about my journey in this field and using these tools.
-2. GEE. Google Earth Engine is an incredible resource for cloud geospatial computer. Here's how to get started.
-3. Proscons.
-4. Python.
-5. QGIS
-6. SQL
-7. AIML
-8. R
-9. Next
+1. **FOSS**. Free and open source software introduction and a little about my journey in this field and using these tools.
+2. **GEE**. Google Earth Engine is an incredible resource for cloud geospatial computer. This chapter provides some quick tips and steps to get started.
+3. **Proscons**. Outlines the pros and cons for free and open source vs. paid geospatial software.
+4. **Python**.
+5. **QGIS**.
+6. **SQL**. How to get started using the universal database Structured Query Language or SQL using DuckDB and Post-GIS spatial packages.
+7. **AIML**. Artificial intelligence (AI) and machine learning (ML) are sorta popular right now, no? Here's how to use these tools to complement, not replace, your work.
+8. **R**. A programming language universally adopted by academics, R is easy to use, get started, and has many statistical computing, data visualization, and geospatial packages. We'll use it within the free desktop integrated development environment (IDE).
+9. **Next**. We'll look into a crystal ball, that's actually a globe, for some thoughts and insights to the future of free and open source geospatial software.
 
 ## jupyter{book}
 This book was made using [Jupyter Books](https://jupyterbook.org/) a free and open source package that lets anyone build beautiful, publication quality books and articles from computational content. Thank you Jupyter Books for this wonderful resource!
@@ -38,9 +38,7 @@ I would like thank and acknowledge many of the free and open source geospatial p
 
 A great portion of this book is adapted from Quisheng Wu's extensive, innovative, and useful geospatial resources such as Geemap and Leafmap. Dr. Wu's vast geospatial knowledge, tutorials, videos and courses are an incredible learning resource. Thank you Quisheng! I only hope this complements your work.
 
-Thanks to reviewers.
-
-Thank you to my family.
+A special thank you to my family while I wrote this in the early AM or late PM hours. Your love and support are always an inspiration to me. A special extra thank you to my spouse who originally inspired me to get more serious about geospatial analysis. It's hard to start out doing this when you have a Ph.D. in the house with a degree in ecological remote sensing, but you always encouraged me and, with some sighing, helped explain many things. Thank you Emma!
 
 ```{tableofcontents}
 ```
