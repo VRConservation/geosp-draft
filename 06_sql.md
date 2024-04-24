@@ -10,11 +10,12 @@ Any time you perform a definition query in ArcGIS Pro or a data query in QGIS, S
 Add photo of a def query before and after in Arc (with and w/o SQL)
 
 ## DuckDB
-We'll mostly use [DuckDB](https://duckdb.org/) for examples in this chapters. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript and just works. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter.
+We'll use [DuckDB](https://duckdb.org/) for examples in this chapters. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript and just works. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter.
 
-Special thanks to Quisheng Wu for how to use DuckDB from his [Geog-414 course](https://geog-414.gishub.org/) that has superb tutorials on Python, Earth Engine, DuckDB and PostGIS.
+A special thank you to Quisheng Wu for DuckDB tutorials/lectures from his [Geog-414 course](https://geog-414.gishub.org/) that has superb tutorials on Python, Earth Engine, DuckDB and PostGIS.
 
 ## Installation
+Adapt the installation from the [geog414 duck db page](https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html#installation)?
 
 ## Penguins
 OK, we're going to shift to penguins but use Ducks to analyze them. The repo is at the [palmerpenguins](https://github.com/allisonhorst/palmerpenguins/blob/main/README.md) repo on Github. We'll use this in the R chapter as well.
@@ -22,3 +23,12 @@ OK, we're going to shift to penguins but use Ducks to analyze them. The repo is 
 csv files are at inst/extdata/penguins_raw.csv
 
 Maybe not? Get another dataset from Marin? or Canada forests? Might be better to forests.
+
+[lonboard](https://github.com/developmentseed/lonboard)
+[overture map data](https://docs.overturemaps.org/) is mostly buildings and infrastructure
+    [query data and load to kepler.gl](https://docs.overturemaps.org/examples/kepler-gl/) using duckdb
+    [examples page](https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45) has more with duck
+
+
+[open geospatial](https://github.com/opengeos/geospatial-data-catalogs) datasets
+use the cleaned LEWO sets and upload to a github page
