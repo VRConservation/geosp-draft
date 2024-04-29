@@ -32,3 +32,5 @@ Maybe not? Get another dataset from Marin? or Canada forests? Might be better to
 
 [open geospatial](https://github.com/opengeos/geospatial-data-catalogs) datasets
 use the cleaned LEWO sets and upload to a github page
+
+youtube course from freecode camp, note the outline: https://www.youtube.com/watch?v=mXW7JHJM34k
