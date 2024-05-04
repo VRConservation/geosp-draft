@@ -5,7 +5,7 @@
 ## TL;DR
 - See the [Cloud-Based Remote Sensing with Google Earth Engine](https://www.eefabook.org/go-to-the-book.html) book or the [GEE Course](https://spatialthoughts.com/courses/google-earth-engine/) from Spatial Thoughts to get started.
 - GEE's strength is cloud-based analysis; not visualization. See Chapters 4, 5, and 8 for better visualization/cartographic tools.
-- See Chapter 4 and [Geemap](https://geemap.org/) for an easier way to deploy GEE.
+- See Chapter 4 and [Geemap](https://geemap.org/) for a way to deploy GEE using Python.
 
 ## Scenario
 You need to do a quick exploratory data analysis of above and below ground carbon biomass for an area of interest near Lake Tahoe in the Central Sierra, California. A donor has asked you to this by end of the week. You go down the hall to the right where the map plotters are and ask the GIS guy. He peers up above his array of screens, says he's busyworking on a dozen other projects, he might be able to get you something in 2 weeks. He suggests you check out Google Earth Enginge.
