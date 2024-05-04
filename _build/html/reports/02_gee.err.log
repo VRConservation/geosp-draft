@@ -4,7 +4,7 @@ Traceback (most recent call last):
   File "C:\Users\vance\anaconda3\envs\spatial\Lib\site-packages\nbclient\client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\vance\anaconda3\envs\spatial\Lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+  File "C:\Users\vance\anaconda3\envs\spatial\Lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
     return loop.run_until_complete(inner)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\vance\anaconda3\envs\spatial\Lib\asyncio\base_events.py", line 654, in run_until_complete
