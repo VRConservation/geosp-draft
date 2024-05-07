@@ -4,7 +4,7 @@ Traceback (most recent call last):
   File "C:\Users\vance\anaconda3\envs\spatial\Lib\site-packages\nbclient\client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\vance\anaconda3\envs\spatial\Lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+  File "C:\Users\vance\anaconda3\envs\spatial\Lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
     return loop.run_until_complete(inner)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\vance\anaconda3\envs\spatial\Lib\asyncio\base_events.py", line 654, in run_until_complete
@@ -32,7 +32,7 @@ bbox = [146.5, -43.6, 146.7, -43.4]
 [1;31mNameError[0m                                 Traceback (most recent call last)
 Cell [1;32mIn[2], line 2[0m
 [0;32m      1[0m [38;5;66;03m# Earth search is managed by Element-84 and provides access to a wide range of data sources[39;00m
-[1;32m----> 2[0m client [38;5;241m=[39m [43mClient[49m[38;5;241m.[39mopen([38;5;124m"[39m[38;5;124mhttps://earth-search.aws.element84.com/v1[39m[38;5;124m"[39m)
+[1;32m----> 2[0m client [38;5;241m=[39m Client[38;5;241m.[39mopen([38;5;124m"[39m[38;5;124mhttps://earth-search.aws.element84.com/v1[39m[38;5;124m"[39m)
 [0;32m      3[0m collection [38;5;241m=[39m [38;5;124m"[39m[38;5;124msentinel-2-l2a[39m[38;5;124m"[39m
 [0;32m      5[0m [38;5;66;03m# Create a bounding box centered near New River Lagoon in Tasmania[39;00m
 [0;32m      6[0m [38;5;66;03m# The bounding box is lower-left x, lower-left y, upper-right x, upper-right y[39;00m

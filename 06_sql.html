@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -182,7 +182,7 @@
 <li class="toctree-l1"><a class="reference internal" href="01_foss.html">1. FOSS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_gee.html">2. Google Earth Engine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_proscons.html">3. Pros &amp; Cons</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_python.html">4. Geospatial Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_python.html">4. Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_qgis.html">5. QGIS</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">6. SQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_aiml.html">7. AI &amp; ML</a></li>
@@ -441,6 +441,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckdb">6.2. DuckDB</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">6.3. Installation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penguins">6.4. Penguins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.5. Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -466,8 +467,8 @@ document.write(`
 </section>
 <section id="duckdb">
 <h2><span class="section-number">6.2. </span>DuckDB<a class="headerlink" href="#duckdb" title="Link to this heading">#</a></h2>
-<p>We’ll mostly use <a class="reference external" href="https://duckdb.org/">DuckDB</a> for examples in this chapters. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript and just works. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter.</p>
-<p>A special thank you to Quisheng Wu for how to use DuckDB from his <a class="reference external" href="https://geog-414.gishub.org/">Geog-414 course</a> that has superb tutorials on Python, Earth Engine, DuckDB and PostGIS.</p>
+<p>We’ll use <a class="reference external" href="https://duckdb.org/">DuckDB</a> for examples in this chapters. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript and just works. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter.</p>
+<p>A special thank you to Quisheng Wu for DuckDB tutorials/lectures from his <a class="reference external" href="https://geog-414.gishub.org/">Geog-414 course</a> that has superb tutorials on Python, Earth Engine, DuckDB and PostGIS.</p>
 </section>
 <section id="installation">
 <h2><span class="section-number">6.3. </span>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
@@ -482,7 +483,16 @@ document.write(`
 <a class="reference external" href="https://docs.overturemaps.org/">overture map data</a> is mostly buildings and infrastructure
 <a class="reference external" href="https://docs.overturemaps.org/examples/kepler-gl/">query data and load to kepler.gl</a> using duckdb
 <a class="reference external" href="https://docs.overturemaps.org/examples/#13/47.6/-122.33/0/45">examples page</a> has more with duck</p>
-<p><a class="reference external" href="https://github.com/opengeos/geospatial-data-catalogs">open geospatial</a> datasets</p>
+<p><a class="reference external" href="https://github.com/opengeos/geospatial-data-catalogs">open geospatial</a> datasets
+use the cleaned LEWO sets and upload to a github page</p>
+<p>youtube course from freecode camp, note the outline: <a class="reference external" href="https://www.youtube.com/watch?v=mXW7JHJM34k">https://www.youtube.com/watch?v=mXW7JHJM34k</a></p>
+</section>
+<section id="resources">
+<h2><span class="section-number">6.5. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong><a class="reference external" href="https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html">GEOG-414</a></strong>. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville is a definitive and recommended way to get started with DuckDB.</p></li>
+<li><p><strong><a class="reference external" href="https://spatial-sql.com/">Spatial SQL</a></strong>. Matt Forrest’s text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use an edit (many spelling errors) and better organization (figures disconnected from text) everything is in the book that you will need to become a spatial SQL expert.</p></li>
+</ul>
 </section>
 </section>
 
@@ -554,6 +564,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckdb">6.2. DuckDB</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">6.3. Installation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penguins">6.4. Penguins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.5. Resources</a></li>
 </ul>
   </nav></div>
 
