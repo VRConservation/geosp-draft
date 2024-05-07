@@ -182,7 +182,7 @@
 <li class="toctree-l1"><a class="reference internal" href="01_foss.html">1. FOSS</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Google Earth Engine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_proscons.html">3. Pros &amp; Cons</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_python.html">4. Geospatial Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_python.html">4. Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_qgis.html">5. QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_sql.html">6. SQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_aiml.html">7. AI &amp; ML</a></li>
@@ -460,19 +460,19 @@ document.write(`
 <section id="tl-dr">
 <h2><span class="section-number">2.1. </span>TL;DR<a class="headerlink" href="#tl-dr" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>See the <a class="reference external" href="https://www.eefabook.org/go-to-the-book.html">Cloud-Based Remote Sensing with Google Earth Engine</a> book or the <a class="reference external" href="https://spatialthoughts.com/courses/google-earth-engine/">GEE Course</a> from Spatial Thoughts to get started.</p></li>
-<li><p>GEE’s strength is cloud-based analysis; not visualization. See Chapters 4, 5, and 8 for better visualization/cartographic tools.</p></li>
-<li><p>See Chapter 4 and <a class="reference external" href="https://geemap.org/">Geemap</a> for an easier way to deploy GEE.</p></li>
+<li><p>See the <a class="reference external" href="https://www.eefabook.org/go-to-the-book.html">Cloud-Based Remote Sensing with Google Earth Engine</a> book or the <a class="reference external" href="https://spatialthoughts.com/courses/google-earth-engine/">GEE Course</a> from Spatial Thoughts to get started.
+GEE’s strength is cloud-based analysis, not visualization. For better visualization/cartographic tools, see Chapters 4, 5, and 8.</p></li>
+<li><p>See Chapter 4 and <a class="reference external" href="https://geemap.org/">Geemap</a> for a way to deploy GEE using Python.</p></li>
 </ul>
 </section>
 <section id="scenario">
 <h2><span class="section-number">2.2. </span>Scenario<a class="headerlink" href="#scenario" title="Link to this heading">#</a></h2>
-<p>You need to do a quick exploratory data analysis of above and below ground carbon biomass for an area of interest near Lake Tahoe in the Central Sierra, California. A donor has asked you to this by end of the week. You go down the hall to the right where the map plotters are and ask the GIS guy. He peers up above his array of screens, says he’s busyworking on a dozen other projects, he might be able to get you something in 2 weeks. He suggests you check out Google Earth Enginge.</p>
-<p>Yes! You’ve heard of this, you’re thinking Google Earth, it will be easy, but you check out Earth Engine and find a console with an empty map and the required Javascript coding is another universe, let alone language, to you.</p>
+<p>You need to do a quick exploratory data analysis of above and below-ground carbon biomass for an area of interest near Lake Tahoe in the Central Sierra, California. A donor has asked you to do this by the end of the week. You go down the hall to the right where the map plotters are, and ask the GIS guy. He peers up above his array of screens, says he’s busyworking on a dozen other projects, he might be able to get you something in 2 weeks. He suggests you check out Google Earth Engine.</p>
+<p>Yes! You’ve heard of this, and you think Google Earth will be easy. But when you check out Earth Engine and find a console with an empty map, the required Javascript coding is another universe, let alone language.</p>
 </section>
 <section id="diy">
 <h2><span class="section-number">2.3. </span>DIY<a class="headerlink" href="#diy" title="Link to this heading">#</a></h2>
-<p>OK, so this is even if you have a GIS guy down the hall with the defunct plotter. Many of you are too small and can’t afford to pay someone or a consultant to conduct your geospatial analysis. How do you DIY it? Free and open source software (FOSS), or FOSS4G when it refers to free and open source geospatial, is readily available, and, much better than a costly yearly subscription fee it is free. Contrary to popular opinion, it’s not that difficult to start. The full code for this example can be found <a class="reference external" href="https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2">here</a>.</p>
+<p>This scenario is even if you have a GIS guy down the hall with the defunct plotter. Many of you are too small and can’t afford to pay someone or a consultant to conduct your geospatial analysis. How do you DIY it? Free and open source software (FOSS), or FOSS4G when it refers to free and open source geospatial, is readily available, and, much better than a costly yearly subscription fee, it is free. Contrary to popular opinion, it’s not that difficult to start. The full code for this example can be found <a class="reference external" href="https://code.earthengine.google.com/609ec9275c6c686b4ddd394f520a27a2">here</a>.</p>
 <p>Here’s how:</p>
 <p>Once you log into <a class="reference external" href="https://code.earthengine.google.com/">Earth Engine</a>, search for ‘carbon’ in the search bar at the top of the page. Select Global Aboveground and Belowground Carbon Density Maps. In the lower left of the page, select see example:</p>
 <p><img alt="aboveground | 500" src="https://i.imgur.com/z3xt9WD.png" /></p>

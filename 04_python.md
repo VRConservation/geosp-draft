@@ -1,8 +1,8 @@
-# Geospatial Python
+# Python
 
-Python is widely applicable and used in the geospatial community. ArcGIS Pro has a python package called Arcpy and QGIS has a packaged named PYQGIS. However, Arcpy is not easy or intuitive to use, even though it's a python package. I tried it, I read an entire book on it, I struggled using the notebooks, which are slow to load and not easy to link to VS Code.
+Python is widely applicable and used in the geospatial community. ArcGIS Pro has a Python package called Arcpy, and QGIS has a package named PYQGIS. However, even though Arcpy is a Python package, it is not easy or intuitive to use. I tried it, read an entire book on it, and struggled using the notebooks, which are slow to load and not easy to link to VS Code.
 
-Then I found geemap and leafmap, incredible user friendly python packages developed by Qiushen Wu and available on github at GISWQS, along with clear tutorials at leafmap.org and geemap.org and videos at [Open Geospatial Solutions](https://www.youtube.com/@giswqs). Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me and it opened up another world to using Python to rapidly analyse data.
+Then I found Geemap and Leafmap—incredible, user-friendly Python packages developed by Qiusheng Wu and available on GitHub at GISWQS. There are also clear tutorials at leafmap.org and geemap.org and videos at [Open Geospatial Solutions](https://www.youtube.com/@giswqs). Many analyses require only one line of code. Here, geospatial analysis using scripts just clicked for me, and it opened up another world to using Python to analyze data rapidly.
 
 ## Getting Started
 
@@ -10,15 +10,15 @@ See the 5.4 Resources for more information.
 
 ## Sentinel-2 Data
 
-Let's look at a simple example from a github [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. Open [colab](https://colab.research.google.com/) and click the blue 'New notebook' button.
+Let's look at a simple example from a GitHub [gist](https://gist.github.com/alexgleith/dc49156aab4b9270b0a0f145bd7fa0ce) posted by Alex Leith. Open [colab](https://colab.research.google.com/) and click the blue 'New notebook' button.
 
-```{note} 'Uncommenting' a line in python means removing the hashtag before the command, or click on the line then click control or command plus back slash (/).
+```{note} 'Uncommenting' a line in Python means removing the hashtag before the command or clicking on the line then clicking control or command plus backslash (/).
 ```
 
 Install the dependencies:
 
 ```python
-# Uncomment line below to install pystac and odc
+# Uncomment the line below to install pystac and odc
 # pip install pystac-client odc-stac odc-geo
 ```
 Access data and create a bounding box:
@@ -59,16 +59,16 @@ Sentinel-2 true color image:
 
 ![](https://i.imgur.com/ea6GCzY.png)
 
-The access and sharing of this code is another example of why free and open source is special, the community is willing to share it it is reproduceable, and easily modified to meet your needs. Thanks to Alex Leith for sharing this.
+The access and sharing of this code are another example of why free and open-source software is special. The community is willing to share it, and it is reproducible and easily modified to meet your needs. Thanks to Alex Leith for sharing this.
 
 ## Geemap
-Compared to using Javascript, Geemap is a much easier way to access, analyze, and visualize Earth Engine data all within a python package environment developed by [Quisheng Wu](https://github.com/giswqs).
+Compared to Javascript, Geemap is a much easier way to access, analyze, and visualize Earth Engine data all within a Python package environment developed by [Quisheng Wu](https://github.com/giswqs).
 
 ```{admonition} Getting Started
 Watch this [installation video](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) followed by this [vs code and github](https://www.youtube.com/watch?v=gyQ6wBqYGks&list=PLAxJ4-o7ZoPeXzIjOJx3vBF0ftKlcYH9J&index=3) video. If you already have an IDE, miniconda, and virtual env's installed, go to the Geemap [installation](https://geemap.org/installation/) page.
 ```
 
-Let's look at how to visualize the same map from Chapter 2 using Geemap. Open a jupyter notebook and add the following codeblock:
+Let's look at how to visualize the same map from Chapter 2 using Geemap. Open a Jupyter notebook and add the following code block:
 
 ```python
 # Import geemap and create an interactive map
@@ -78,15 +78,15 @@ geemap.ee_initialize()
 m = geemap.Map()
 m
 ```
-That will will give you a generic world map with map widgets:
+That will give you a generic world map with map widgets:
 
 ![](https://i.imgur.com/hKl0roO.png)
 
-In the upper right corner of the map, click the wrench icon then click the two encircling arrows box (bottom row, middle) to open the Javascript to Python code converter:
+In the upper right corner of the map, click the wrench icon, then click the two encircling arrows box (bottom row, middle) to open the Javascript to Python code converter:
 
 ![](https://i.imgur.com/XXdWssh.png)
 
-Go to your Earth Engine [code editor](https://code.earthengine.google.com/), open the script from Chapter 2, select all, and paste it into the converter. Click the convert button. The code is copied to the clipboard. Paste it into a new codeblock and comment out the definition function on lines 4-6:
+Go to your Earth Engine [code editor](https://code.earthengine.google.com/), open the script from Chapter 2, select all, and paste it into the converter. Click the convert button. The code is copied to the clipboard. Paste it into a new code block and comment out the definition function on lines 4-6:
 
 ```python
 # Add global carbon density map
@@ -120,13 +120,13 @@ Running that block will give you the following:
 
 ![](https://i.imgur.com/uAQ9wBz.jpeg)
 
-If you return to the wrench icon and select the layers icon to the left you can switch layers on and off
+If you return to the wrench icon and select the layers icon to the left, you can switch layers on and off
 
 ![](https://i.imgur.com/RzJfVjV.png)
 
 Add a new code block and add an area of interest called bbox, short for bounding box:
 
-```{tip} To run the code in a code block click ctrl/command + enter. To run the code and add a new code block click alt + enter.
+```{tip} To run the code in a code block, click ctrl/command + enter. To run the code and add a new code block, click alt + enter.
 ```
 
 ```python
@@ -147,11 +147,11 @@ m.addLayer(aoi, vis_b, 'AOI belowground biomass carbon')
 m.addLayer(aoi, vis_a, 'AOI aboveground biomass carbon')
 m
 ```
-If you turn off the aboveground and belowground maps your map will now look like the following with only the clipped aboveground biomass carbon layer showing:
+If you turn off the aboveground and belowground maps, your map will now look like the following, with only the clipped aboveground biomass carbon layer showing:
 
 ![](https://i.imgur.com/DDRJeDF.png)
 
-Delete the function from the javascript conversion that you commented out previously in lines 4-6. If you need to keep running and test the map you can turn off the original biomass layers added for the entire globe by changing the center map add map layers to codeblock to
+Delete the function from the javascript conversion that you commented out previously in lines 4-6. If you need to keep running and test the map you can turn off the original biomass layers added for the entire globe by changing the center map add map layers to code block to
 
 ```python
 # Center map and add layers
@@ -162,27 +162,27 @@ m.addLayer(dataset, vis_b, 'Belowground biomass carbon', False)
 Adding 'False' after the layer name still adds the layers to the map but turns them off by default. 
 
 ```{admonition} Lambda Function
-Let's take another look at the lambda function to clip the raster. Lambda functions are similar to other python functions but are not bound to a name when run. Known as anonymous functions, they are used when you need a one-off functions that isn't separately defined. In our case, the Lamda function takes an image, clips it to the bounding box and returns the clipped image. The map() function, not to be confused with the Map function in Javascript, applies the function to every image in the ImageCollection.
+Let's take another look at the lambda function to clip the raster. Lambda functions are similar to other Python functions but are not bound to a name when run. Known as anonymous functions, they are used when you need a one-off function that isn't separately defined. In our case, the Lamda function takes an image, clips it to the bounding box, and returns the clipped image. The map() function, not to be confused with the Map function in Javascript, applies the function to every image in the ImageCollection.
 ```
 
 ## Leafmap
-A related Python package worth exploring is [Leafmap](https://leafmap.org/), also developed by Quisheng Wu. Like Geemap the site has extensive documentation and tutorials. I highly recommend looking at one of the workshops that will guide you from installation to examples and many use cases.
+A related Python package worth exploring is [Leafmap](https://leafmap.org/), also developed by Quisheng Wu. Like Geemap, the site has extensive documentation and tutorials. I highly recommend attending one of the workshops, which will guide you through installation, examples, and many use cases.
 
-The tutorials and workshops are supported by notebooks and videos to thoroughly walk you through the use of this fantastic software package. Click on the links provided to run the code in binder or colab. If you wanted to run a workshop in VS Code:
+The tutorials and workshops are supported by notebooks and videos to thoroughly walk you through this fantastic software package. Click on the links provided to run the code in Binder or Colab. If you wanted to run a workshop in VS Code:
 
 1. Click workshops in leafmap.org
 2. Select the workshop
-3. Select GitHub in the upper right, select examples then notebooks
+3. Select GitHub in the upper right, select examples, then notebooks
 4. Click on the notebook you want (*.ipynb)
 5. Below history in the upper right of your browser, click on the download raw file button, save it, then click to open it in VS Code. 
-6. Alternatively go straight to the workshop notebooks such as the [FOSS4G Workshop](https://github.com/opengeos/leafmap/blob/master/examples/workshops/FOSS4G_2021.ipynb).
+6. Alternatively, go straight to the workshop notebooks, such as the [FOSS4G Workshop](https://github.com/opengeos/leafmap/blob/master/examples/workshops/FOSS4G_2021.ipynb).
 
-Make sure you have leafmap installed in your environment before running the code cells. See the Miniconda/Anaconda section of the FOSS4G workshop for a quick starter guide on how to do this.
+Before running the code cells, ensure you have Leafmap installed in your environment. For a quick starter guide on how to do this, see the Miniconda/Anaconda section of the FOSS4G workshop.
 
 ## Resources
 
 - [Geemap](https://geemap.org/) has a webpage, book, tutorials, API, and much more to support this excellent Python package.
 - [Leafmap](https://leafmap.org/) is a Python package for geospatial analysis in a Jupyter environment. It has superb documentation, tutorials, and ease of use.
-- [Open Geospatial Solutions](https://github.com/opengeos) host many open-source geospatial software projects and datasets.
-- [Spatial Thoughts](https:spatialthoughts.com) run by Ujaval Gandhi has a free course called [Python Foundation for Spatial Analysis](https://courses.spatialthoughts.com/python-foundation.html). The site has many other free and paid courses and tutorials for geospatial analysis.
+- [Open Geospatial Solutions](https://github.com/opengeos) hosts many open-source geospatial software projects and datasets.
+[Spatial Thoughts](https://spatialthoughts.com), run by Ujaval Gandhi, offers a free course called [Python Foundation for Spatial Analysis](https://courses.spatialthoughts.com/python-foundation.html). The site also offers many other free and paid courses and tutorials for geospatial analysis.
 - [Geocomputation with Python](https://py.geocompx.org/) is an open source book inspired by the FOSS4G movement. 
