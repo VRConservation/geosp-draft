@@ -7,16 +7,16 @@ parts:
   - caption: Chapters
     numbered: True
     chapters:
-      - file: 01_foss
-      - file: 02_gee
-      - file: 03_proscons
-      - file: 04_python
-      - file: 05_qgis
-      - file: 06_sql
-      - file: 07_aiml
-      - file: 08_R
-      - file: 09_future
+      - file: chapters/01_foss
+      - file: chapters/02_gee
+      - file: chapters/03_proscons
+      - file: chapters/04_python
+      - file: chapters/05_qgis
+      - file: chapters/06_sql
+      - file: chapters/07_aiml
+      - file: chapters/08_R
+      - file: chapters/09_future
   - caption: Appendices
     chapters:
       - file: author
-      - file: bibliography   
+      - file: chapters/bibliography   
