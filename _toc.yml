@@ -11,11 +11,11 @@ parts:
       - file: chapters/02_gee
       - file: chapters/03_proscons
       - file: chapters/04_python
-      - file: chapters/05_qgis
-      - file: chapters/06_sql
-      - file: chapters/07_aiml
-      - file: chapters/08_R
-      - file: chapters/09_future
+      # - file: chapters/05_qgis
+      # - file: chapters/06_sql
+      # - file: chapters/07_aiml
+      # - file: chapters/08_R
+      # - file: chapters/09_future
   - caption: Appendices
     chapters:
       - file: author

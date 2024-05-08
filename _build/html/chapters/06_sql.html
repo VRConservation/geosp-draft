@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6. SQL &#8212; Free and Open Source Geospatial Solutions</title>
+    <title>SQL &#8212; Free and Open Source Geospatial Solutions</title>
   
   
   
@@ -61,8 +61,6 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. AI &amp; ML" href="07_aiml.html" />
-    <link rel="prev" title="5. QGIS" href="05_qgis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,6 +122,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -178,16 +178,11 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01_foss.html">1. FOSS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_gee.html">2. Google Earth Engine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_proscons.html">3. Pros &amp; Cons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04_python.html">4. Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_qgis.html">5. QGIS</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. SQL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_aiml.html">7. AI &amp; ML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="08_R.html">8. R</a></li>
-<li class="toctree-l1"><a class="reference internal" href="09_future.html">9. Future</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
@@ -437,11 +432,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new">6.1. New</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckdb">6.2. DuckDB</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">6.3. Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penguins">6.4. Penguins</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.5. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new">New</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckdb">DuckDB</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penguins">Penguins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -454,10 +449,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="sql">
-<h1><span class="section-number">6. </span>SQL<a class="headerlink" href="#sql" title="Link to this heading">#</a></h1>
+<h1>SQL<a class="headerlink" href="#sql" title="Link to this heading">#</a></h1>
 <p>The language you must learn for geospatial analysis!</p>
 <section id="new">
-<h2><span class="section-number">6.1. </span>New<a class="headerlink" href="#new" title="Link to this heading">#</a></h2>
+<h2>New<a class="headerlink" href="#new" title="Link to this heading">#</a></h2>
 <p>I have to admit I’m very new to using SQL for geospatial analysis, but am amazed at how easy it is to learn, how fast it analyzes large datasets, and how critical it is for data analysis. SQL really is the universal database management language, so, geospatial aside, if you work with data, you need to learn how to use it.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -466,18 +461,24 @@ document.write(`
 <p>Add photo of a def query before and after in Arc (with and w/o SQL)</p>
 </section>
 <section id="duckdb">
-<h2><span class="section-number">6.2. </span>DuckDB<a class="headerlink" href="#duckdb" title="Link to this heading">#</a></h2>
+<h2>DuckDB<a class="headerlink" href="#duckdb" title="Link to this heading">#</a></h2>
 <p>We’ll use <a class="reference external" href="https://duckdb.org/">DuckDB</a> for examples in this chapters. The software is easy to install (takes seconds), fast, works seamlessly with many programming languages, including Python, R, and Javascript and just works. DuckDB also has a spatial extension to perform queries and analysis of geospatial data that we will look at in this chapter.</p>
 <p>A special thank you to Quisheng Wu for DuckDB tutorials/lectures from his <a class="reference external" href="https://geog-414.gishub.org/">Geog-414 course</a> that has superb tutorials on Python, Earth Engine, DuckDB and PostGIS.</p>
 </section>
 <section id="installation">
-<h2><span class="section-number">6.3. </span>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
 <p>Adapt the installation from the <a class="reference external" href="https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html#installation">geog414 duck db page</a>?</p>
 </section>
 <section id="penguins">
-<h2><span class="section-number">6.4. </span>Penguins<a class="headerlink" href="#penguins" title="Link to this heading">#</a></h2>
+<h2>Penguins<a class="headerlink" href="#penguins" title="Link to this heading">#</a></h2>
+<p>Use a dataset from <a class="reference external" href="http://movebank.org">movebank.org</a>? Barnacle geese in downloads
+kaggle dataset
+methane emissions dataset
+FRAP wildfire database
+WCMC PA database. csv in downloads
+PADDD database if able to download</p>
 <p>OK, we’re going to shift to penguins but use Ducks to analyze them. The repo is at the <a class="reference external" href="https://github.com/allisonhorst/palmerpenguins/blob/main/README.md">palmerpenguins</a> repo on Github. We’ll use this in the R chapter as well.</p>
-<p>csv files are at inst/extdata/penguins_raw.csv</p>
+<p>csv files are at inst/extdata/penguins_raw.csv on the github site</p>
 <p>Maybe not? Get another dataset from Marin? or Canada forests? Might be better to forests.</p>
 <p><a class="reference external" href="https://github.com/developmentseed/lonboard">lonboard</a>
 <a class="reference external" href="https://docs.overturemaps.org/">overture map data</a> is mostly buildings and infrastructure
@@ -488,10 +489,12 @@ use the cleaned LEWO sets and upload to a github page</p>
 <p>youtube course from freecode camp, note the outline: <a class="reference external" href="https://www.youtube.com/watch?v=mXW7JHJM34k">https://www.youtube.com/watch?v=mXW7JHJM34k</a></p>
 </section>
 <section id="resources">
-<h2><span class="section-number">6.5. </span>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<h2>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong><a class="reference external" href="https://geog-414.gishub.org/book/duckdb/01_duckdb_intro.html">GEOG-414</a></strong>. The DuckDB portion of the Geography 414 course from Quisheng Wu, UT Knoxville is a definitive and recommended way to get started with DuckDB.</p></li>
 <li><p><strong><a class="reference external" href="https://spatial-sql.com/">Spatial SQL</a></strong>. Matt Forrest’s text on using SQL in modern GIS is an excellent reference and starter for using SQL within a spatial context. Although the book could use an edit (many spelling errors) and better organization (figures disconnected from text) everything is in the book that you will need to become a spatial SQL expert.</p></li>
+<li><p><strong><a class="reference external" href="https://twitter.com/spatialthoughts/status/1774833044396081189">SQL-QGIS Tip</a></strong>. You can use the ‘Execute SQL’ processing algorithm to run SQL queries on ANY vector layer within QGIS. Here’s an example of calculating group statistics on a vector layer. This also allows you to run SQL queries in a model.</p></li>
+<li><p><strong><a class="reference external" href="https://tech.marksblogg.com/duckdb-gis-spatial-extension.html">Mark Litwintschik</a></strong>. Mark has a great data and gis blog that features several tutorial running the DuckDB spatial extension.</p></li>
 </ul>
 </section>
 </section>
@@ -526,24 +529,6 @@ use the cleaned LEWO sets and upload to a github page</p>
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="05_qgis.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>QGIS</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="07_aiml.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>AI &amp; ML</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -560,11 +545,11 @@ use the cleaned LEWO sets and upload to a github page</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new">6.1. New</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckdb">6.2. DuckDB</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">6.3. Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penguins">6.4. Penguins</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">6.5. Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new">New</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duckdb">DuckDB</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penguins">Penguins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
 </ul>
   </nav></div>
 

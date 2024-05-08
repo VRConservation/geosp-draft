@@ -5,7 +5,7 @@ Welcome! Free and Open Source Geospatial Solutions provides resources and exampl
 Russell, Vance. 2024. Free and Open Source Geospatial Solutions. Jupyterbook.org.
 
 ## Support
-This book is a free to use resource to anyone. If you would like to support me, provide a donation, or buy me a coffee, please go to #####.com. I will be adding chapters and resources in the future. Thank you!
+This book is a free to use resource to anyone. If you would like to support me, provide a donation, or buy me a coffee, please go to my [buymeacoffe](https://www.buymeacoffee.com/3point) site. I will be adding chapters and resources in the future. Thank you for your support!
 
 ## Why this book
 Accessing, processing, and analyzing geospatial data can be daunting tasks, often hindered by issues such as data accessibility, compatibility, and cost constraints. There are a lot of geospatial resources, tutorials, and books out there but most focus on specific tools, such as Spatial SQL by Matt Forrest or the Google Earth Engine remote sensing book at eefa.org. This book is a resource to provide a beginners guide to getting going with each of those and compare free and open source software to paid resources and books.
@@ -23,12 +23,14 @@ The book contains the following chapters:
 1. **FOSS**. Free and open source software introduction and a little about my journey in this field and using these tools.
 2. **GEE**. Google Earth Engine is an incredible resource for cloud geospatial computer. This chapter provides some quick tips and steps to get started.
 3. **Proscons**. Outlines the pros and cons for free and open source vs. paid geospatial software.
-4. **Python**.
-5. **QGIS**.
+4. **Python**. Using Python for geospatial data analysis and visualization with a variety of libraries.
+5. **QGIS**. There are many QGIS tutorials along with a supportive community. This chapter will get you started on the basics for using this powerful geospatial software.
 6. **SQL**. How to get started using the universal database Structured Query Language or SQL using DuckDB and Post-GIS spatial packages.
 7. **AIML**. Artificial intelligence (AI) and machine learning (ML) are sorta popular right now, no? Here's how to use these tools to complement, not replace, your work.
 8. **R**. A programming language universally adopted by academics, R is easy to use, get started, and has many statistical computing, data visualization, and geospatial packages. We'll use it within the free desktop integrated development environment (IDE).
 9. **Next**. We'll look into a crystal ball, that's actually a globe, for some thoughts and insights to the future of free and open source geospatial software.
+
+Only written chapters will appear in the table of contents panel to the left and below. Once each chapter is published they will appear.
 
 ## jupyter{book}
 This book was made using [Jupyter Books](https://jupyterbook.org/) a free and open source package that lets anyone build beautiful, publication quality books and articles from computational content. Thank you Jupyter Books for this wonderful resource!
